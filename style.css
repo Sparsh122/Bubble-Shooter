@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+html, body{
+width: 100%;
+height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif)
+}
+#main-box{
+    width: 80%;
+    height: 80%;
+    background-color: rgb(45, 44, 44);
+    border-radius: 15px;
+    overflow-x: hidden;
+    border-radius: 20PX;
+    opacity: 0.8;
+}
+.content{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(102, 101, 100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+.content-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgb(4, 4, 4);
+    width: 30%;
+    color:rgb(5, 5, 5);
+    font-size: 20px;
+}
+.content-box>span{
+    width: 30PX;
+    height: 30PX;
+    background-color: rgb(0, 0, 0);
+    margin-left: 10PX;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+}
+.bubble-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+#bubble{
+    width: 50px;
+    height: 50px;
+    background-color: #317b7f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 9px;
+    color: rgb(8, 8, 8);
+}
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+.score-active{
+    color: rgb(162, 160, 163);
+    font-size: 2.4rem;
+    margin-top: 20px;
+    text-align: center;
+    visibility: hidden;
+}
+.current-score{
+    visibility: visible;
+
+}
+h1{
+    font-size:50px;
+    color: #b00c0c;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.block{
+    display: block;
+}
+.btn{
+    padding: 0 15px;
+    height: 25px;
+    width: 130px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    background: #16913f;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family:sans-serif;
+    
+}
+.btn{
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn:active {
+    color: #000
+}
+
+.btna:active:after {
+    background: transparent;
+}
+
+.btn:hover:before {
+    opacity: 1;
+}
+
+.btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
